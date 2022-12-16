@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-l6+_6jdnmek+a#_n9jea-8kaath9^qgcg_+j-z%#^zzb39muy1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['news-aggregator-kevin.azurewebsites.net']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-
+# 'news-aggregator-kevin.azurewebsites.net', 
 # Application definition
 
 INSTALLED_APPS = [
@@ -131,6 +131,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
 STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")
-
+MEDIA_URL = 'news/images/'
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
