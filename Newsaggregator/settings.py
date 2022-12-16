@@ -130,7 +130,7 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
-STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")
+STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "staticfiles")
 MEDIA_URL = 'news/images/'
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 MEDIA_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")
