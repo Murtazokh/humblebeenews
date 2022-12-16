@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l6+_6jdnmek+a#_n9jea-8kaath9^qgcg_+j-z%#^zzb39muy1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*', "humblebeenews.herokuapp.com"]
 
 # 'news-aggregator-kevin.azurewebsites.net', 
 # Application definition
