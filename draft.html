@@ -1,0 +1,711 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HumbleBee.news</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="News Aggregator" />
+	<meta name="keywords" content="latest news, news, sports news, celevbrity news, political news" />
+	<meta name="author" content="S Kevin Joe Harris" />
+
+ 
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="#">
+
+	<!-- Google Webfonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,3,500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	
+	<link rel="icon" href="{% static 'news/images/bee.jpeg' %}" type="image/x-icon">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'news/css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'news/css/icomoon.css' %}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'news/css/magnific-popup.css' %}">
+	<!-- Salvattore -->
+	<link rel="stylesheet" href="{% static 'news/css/salvattore.css' %}">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="{% static 'news/css/style.css' %}">
+	<!-- image handling -->
+	<link rel="stylesheet" href="{% static 'news/css/image.css' %}" type="text/css">
+	<!-- Modernizr JS -->
+	<script src="{% static 'news/js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div id="fh5co-offcanvass">
+		<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">Menu <i class="icon-cross"></i> </a>
+		<h1 class="fh5co-logo"><a class="navbar-brand" href="index.html">News Aggregator</a></h1>
+		<ul>
+			<li class="active"><a href="/">Home</a></li>
+		</ul>
+		<h3 class="fh5co-lead">Connect with us</h3>
+		<p class="fh5co-social-icons">
+			<a href="https://www.linkedin.com/in/kevin-joe-harris/"><i class="fab fa-linkedin"></i></a>
+			<a href="https://github.com/Kevinjoeharris"><i class="fab fa-github"></i></a>
+			<a href="https://www.facebook.com/kevinjoe.harris/"><i class="fab fa-facebook"></i></a>
+			<a href="https://www.instagram.com/kevin_joe_harris/"><i class="icon-instagram"></i></a>
+			
+		</p>
+	</div>
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-12">
+					<img id="profile-pic" src="{% static 'news/images/bee.jpeg' %}" width="80" height="80">
+					<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
+					<a class="navbar-brand" href="index.html">HumbleBee News</a>		
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- END .header -->
+	
+	
+	<div id="fh5co-main">
+		<div class="container">
+
+			<div class="row">
+
+        <div id="fh5co-board" data-columns>
+			<!--KUN.UZ NEWS-->
+        	<div class="item" >
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.0}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.0}}" alt="img" height="188"></a>
+        		</div>
+        		<div class="fh5co-desc"><a href="{{kun_uz_l.0}}">{{kun_uz_t.0}}</a></div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.1}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.1}}">{{kun_uz_t.1}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.2}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.2}}">{{kun_uz_t.2}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.3}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.3}}">{{kun_uz_t.3}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.4}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.4}}">{{kun_uz_t.4}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.5}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.5}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.5}}">{{kun_uz_t.5}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.6}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.6}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.6}}">{{kun_uz_t.6}}</a></div>
+        		</div>
+        	</div>
+
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.8}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.8}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.8}}">{{kun_uz_t.8}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kun_uz_img.9}}" class="image-popup fh5co-board-img"><img src="{{kun_uz_img.9}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kun_uz_l.9}}">{{kun_uz_t.9}}</a></div>
+        		</div>
+        	</div>
+			<!--UZREPORT NEWS-->
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.0}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.0}}">{{uzre_t.0}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.1}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.3}}">{{uzre_t.1}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.2}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.4}}">{{uzre_t.2}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.3}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.5}}">{{uzre_t.3}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.4}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.6}}">{{uzre_t.4}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.5}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.5}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.7}}">{{uzre_t.5}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.6}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.6}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.8}}">{{uzre_t.6}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.7}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.7}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.9}}">{{uzre_t.7}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uzre_img.8}}" class="image-popup fh5co-board-img"><img src="{{uzre_img.8}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uzre_l.10}}">{{uzre_t.8}}</a></div>
+        		</div>
+        	</div>
+
+			<!--BBC NEWS-->
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bbc_img.0}}" class="image-popup fh5co-board-img"><img src="{{bbc_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bbc_l.0}}">{{bbc_t.0}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bbc_img.1}}" class="image-popup fh5co-board-img"><img src="{{bbc_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bbc_l.1}}">{{bbc_t.1}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bbc_img.2}}" class="image-popup fh5co-board-img"><img src="{{bbc_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bbc_l.2}}">{{bbc_t.2}}</a></div>
+        		</div>
+        	</div>
+        	<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bbc_img.3}}" class="image-popup fh5co-board-img"><img src="{{bbc_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bbc_l.3}}">{{bbc_t.3}}</a></div>
+        		</div>
+        	</div>
+			<!-- GAZETA.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{gaz_img.0}}" class="image-popup fh5co-board-img"><img src="{{gaz_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{gaz_l.0}}">{{gaz_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{gaz_img.1}}" class="image-popup fh5co-board-img"><img src="{{gaz_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{gaz_l.1}}">{{gaz_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{gaz_img.2}}" class="image-popup fh5co-board-img"><img src="{{gaz_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{gaz_l.2}}">{{gaz_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{gaz_img.3}}" class="image-popup fh5co-board-img"><img src="{{gaz_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{gaz_l.3}}">{{gaz_t.3}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{gaz_img.4}}" class="image-popup fh5co-board-img"><img src="{{gaz_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{gaz_l.4}}">{{gaz_t.4}}</a></div>
+        		</div>
+        	</div>
+			<!-- UZDAILY.UZ -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{daily_img.0}}" class="image-popup fh5co-board-img"><img src="{{daily_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{daily_l.0}}">{{daily_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{daily_img.1}}" class="image-popup fh5co-board-img"><img src="{{daily_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{daily_l.2}}">{{daily_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{daily_img.2}}" class="image-popup fh5co-board-img"><img src="{{daily_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{daily_l.3}}">{{daily_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{daily_img.3}}" class="image-popup fh5co-board-img"><img src="{{daily_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{daily_l.4}}">{{daily_t.3}}</a></div>
+        		</div>
+        	</div>
+			<!-- QALAMPIR.UZ -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{qal_img.0}}" class="image-popup fh5co-board-img"><img src="{{qal_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{qal_l.0}}">{{qal_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{qal_img.3}}" class="image-popup fh5co-board-img"><img src="{{qal_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{qal_l.2}}">{{qal_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{qal_img.4}}" class="image-popup fh5co-board-img"><img src="{{qal_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{qal_l.3}}">{{qal_t.3}}</a></div>
+        		</div>
+        	</div>
+			<!-- DARYO.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{dar_img.0}}" class="image-popup fh5co-board-img"><img src="{{dar_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{dar_l.0}}">{{dar_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{dar_img.1}}" class="image-popup fh5co-board-img"><img src="{{dar_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{dar_l.1}}">{{dar_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{dar_img.2}}" class="image-popup fh5co-board-img"><img src="{{dar_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{dar_l.2}}">{{dar_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{dar_img.3}}" class="image-popup fh5co-board-img"><img src="{{dar_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{dar_l.3}}">{{dar_t.3}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{dar_img.4}}" class="image-popup fh5co-board-img"><img src="{{dar_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{dar_l.4}}">{{dar_t.4}}</a></div>
+        		</div>
+        	</div>
+
+			<!-- ANIQ.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{aniq_img.0}}" class="image-popup fh5co-board-img"><img src="{{aniq_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{dar_l.0}}">{{dar_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{aniq_img.1}}" class="image-popup fh5co-board-img"><img src="{{aniq_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{aniq_l.1}}">{{aniq_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{aniq_img.2}}" class="image-popup fh5co-board-img"><img src="{{aniq_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{aniq_l.2}}">{{aniq_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{aniq_img.3}}" class="image-popup fh5co-board-img"><img src="{{aniq_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{aniq_l.3}}">{{aniq_t.3}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{aniq_img.4}}" class="image-popup fh5co-board-img"><img src="{{aniq_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{aniq_l.4}}">{{aniq_t.4}}</a></div>
+        		</div>
+        	</div>
+			<!-- ONSIDE.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{side_img.0}}" class="image-popup fh5co-board-img"><img src="{{side_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{side_l.0}}">{{side_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{side_img.1}}" class="image-popup fh5co-board-img"><img src="{{side_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{side_l.1}}">{{side_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{side_img.2}}" class="image-popup fh5co-board-img"><img src="{{side_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{side_l.2}}">{{side_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{side_img.3}}" class="image-popup fh5co-board-img"><img src="{{side_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{side_l.3}}">{{side_t.3}}</a></div>
+        		</div>
+			</div>
+				<!-- SPORT.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sport_img.0}}" class="image-popup fh5co-board-img"><img src="{{sport_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sport_l.0}}">{{sport_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sport_img.1}}" class="image-popup fh5co-board-img"><img src="{{sport_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sport_l.1}}">{{sport_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sport_img.2}}" class="image-popup fh5co-board-img"><img src="{{sport_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sport_l.2}}">{{sport_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sport_img.3}}" class="image-popup fh5co-board-img"><img src="{{sport_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sport_l.3}}">{{sport_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- UZ24.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uz24_img.0}}" class="image-popup fh5co-board-img"><img src="{{uz24_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uz24_l.0}}">{{uz24_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uz24_img.1}}" class="image-popup fh5co-board-img"><img src="{{uz24_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uz24_l.1}}">{{uz24_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uz24_img.2}}" class="image-popup fh5co-board-img"><img src="{{uz24_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uz24_l.2}}">{{uz24_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uz24_img.3}}" class="image-popup fh5co-board-img"><img src="{{uz24_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uz24_l.3}}">{{uz24_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- NUZ.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{nuz_img.0}}" class="image-popup fh5co-board-img"><img src="{{nuz_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{nuz_l.0}}">{{nuz_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{nuz_img.3}}" class="image-popup fh5co-board-img"><img src="{{nuz_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{nuz_l.1}}">{{nuz_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{nuz_img.3}}" class="image-popup fh5co-board-img"><img src="{{nuz_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{nuz_l.2}}">{{nuz_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{nuz_img.4}}" class="image-popup fh5co-board-img"><img src="{{nuz_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{nuz_l.3}}">{{nuz_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- KR.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kr_img.0}}" class="image-popup fh5co-board-img"><img src="{{kr_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uz24_l.0}}">{{kr_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kr_img.1}}" class="image-popup fh5co-board-img"><img src="{{kr_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kr_l.1}}">{{kr_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kr_img.2}}" class="image-popup fh5co-board-img"><img src="{{kr_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kr_l.2}}">{{kr_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{kr_img.3}}" class="image-popup fh5co-board-img"><img src="{{kr_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{kr_l.3}}">{{kr_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- SPUTNIKNEWS-UZ.COM NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sputnik_img.0}}" class="image-popup fh5co-board-img"><img src="{{sputnik_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sputnik_l.0}}">{{sputnik_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sputnik_img.1}}" class="image-popup fh5co-board-img"><img src="{{sputnik_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sputnik_l.1}}">{{sputnik_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sputnik_img.2}}" class="image-popup fh5co-board-img"><img src="{{sputnik_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sputnik_l.2}}">{{sputnik_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{sputnik_img.3}}" class="image-popup fh5co-board-img"><img src="{{sputnik_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{sputnik_l.3}}">{{sputnik_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- SAMARKANDNEWS.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{samnews_img.0}}" class="image-popup fh5co-board-img"><img src="{{samnews_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{samnews_l.0}}">{{samnews_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{samnews_img.1}}" class="image-popup fh5co-board-img"><img src="{{samnews_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{samnews_l.2}}">{{samnews_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{samnews_img.2}}" class="image-popup fh5co-board-img"><img src="{{samnews_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{samnews_l.3}}">{{samnews_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{samnews_img.3}}" class="image-popup fh5co-board-img"><img src="{{samnews_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{samnews_l.4}}">{{samnews_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- UZA.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uza_img.0}}" class="image-popup fh5co-board-img"><img src="{{uza_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uza_l.0}}">{{uza_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uza_img.1}}" class="image-popup fh5co-board-img"><img src="{{uza_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uza_l.2}}">{{uza_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uza_img.2}}" class="image-popup fh5co-board-img"><img src="{{uza_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uza_l.3}}">{{uza_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{uza_img.3}}" class="image-popup fh5co-board-img"><img src="{{uza_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{uza_l.4}}">{{uza_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- ZAMIN.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{zamin_img.0}}" class="image-popup fh5co-board-img"><img src="{{zamin_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{zamin_l.0}}">{{zamin_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{zamin_img.1}}" class="image-popup fh5co-board-img"><img src="{{zamin_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{zamin_l.1}}">{{zamin_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{zamin_img.2}}" class="image-popup fh5co-board-img"><img src="{{zamin_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{zamin_l.2}}">{{zamin_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{zamin_img.3}}" class="image-popup fh5co-board-img"><img src="{{zamin_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{zamin_l.3}}">{{zamin_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- UZMATBUOT.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{matbuot_img.0}}" class="image-popup fh5co-board-img"><img src="{{matbuot_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{matbuot_l.0}}">{{matbuot_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{matbuot_img.1}}" class="image-popup fh5co-board-img"><img src="{{matbuot_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{matbuot_l.1}}">{{matbuot_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{matbuot_img.2}}" class="image-popup fh5co-board-img"><img src="{{matbuot_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{matbuot_l.2}}">{{matbuot_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{matbuot_img.3}}" class="image-popup fh5co-board-img"><img src="{{matbuot_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{matbuot_l.3}}">{{matbuot_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- BUGUN.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bugun_img.0}}" class="image-popup fh5co-board-img"><img src="{{bugun_img.0}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bugun_l.0}}">{{bugun_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bugun_img.2}}" class="image-popup fh5co-board-img"><img src="{{bugun_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bugun_l.1}}">{{bugun_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bugun_img.3}}" class="image-popup fh5co-board-img"><img src="{{bugun_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bugun_l.2}}">{{bugun_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{bugun_img.4}}" class="image-popup fh5co-board-img"><img src="{{bugun_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{bugun_l.3}}">{{bugun_t.3}}</a></div>
+        		</div>
+			</div>
+			<!-- ANTIMON.GOV.UZ NEWS -->
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{antimon_img.1}}" class="image-popup fh5co-board-img"><img src="{{antimon_img.1}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{antimon_l.0}}">{{antimon_t.0}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{antimon_img.2}}" class="image-popup fh5co-board-img"><img src="{{antimon_img.2}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{antimon_l.1}}">{{antimon_t.1}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{antimon_img.3}}" class="image-popup fh5co-board-img"><img src="{{antimon_img.3}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{antimon_l.2}}">{{antimon_t.2}}</a></div>
+        		</div>
+        	</div>
+			<div class="item">
+        		<div class="animate-box">
+	        		<a href="{{antimon_img.4}}" class="image-popup fh5co-board-img"><img src="{{antimon_img.4}}" alt="img" height="188"></a>
+	        		<div class="fh5co-desc"><a href="{{antimon_l.3}}">{{antimon_t.3}}</a></div>
+        		</div>
+			</div>
+        </div>
+        </div>
+       </div>
+	</div>
+
+	<footer id="fh5co-footer">
+		
+		<div class="container">
+			<div class="row row-padded">
+				<div class="col-md-12 text-center">
+					<p class="fh5co-social-icons">
+						<a href="https://www.linkedin.com/in/kevin-joe-harris/"><i class="fab fa-linkedin"></i></a>
+						<a href="https://github.com/Kevinjoeharris"><i class="fab fa-github"></i></a>
+						<a href="https://www.facebook.com/kevinjoe.harris/"><i class="fab fa-facebook"></i></a>
+						<a href="https://www.instagram.com/kevin_joe_harris/"><i class="icon-instagram"></i></a>
+					</p>
+					<p><small>&copy; News Aggregator<br>Developed & Designed by: <a href="https://www.linkedin.com/in/murtazokhon-avazkhonov-3a40a2253/" target="_blank">Murtazokhon</a></small></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- jQuery -->
+	<script src="{% static 'news/js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'news/js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'news/js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'news/js/jquery.waypoints.min.js' %}"></script> 
+	<!-- Magnific Popup -->
+	<script src=" {% static 'news/js/jquery.magnific-popup.min.js' %}"></script>}
+	<!-- Salvattore -->
+	<script src="{% static 'news/js/salvattore.min.js' %}"></script>
+	<!-- Main JS -->
+	<script src="{% static 'news/js/main.js' %}"></script>
+
+	
+
+	
+	</body>
+</html>
