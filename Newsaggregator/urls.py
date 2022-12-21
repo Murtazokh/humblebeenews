@@ -1,24 +1,24 @@
-"""Newsaggregator URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
 from news import views
 
 urlpatterns = [
+    #URL FOR ADMIN PAGE
     path('admin/', admin.site.urls),
+    #URL FOR HOME PAGE
     path('', views.index, name = "home"),
-    path('scrape/', views.get_kun, name="get_kun")
+    #URL FOR SCRAPING LATEST NEWS
+    path('scrape/', views.get_kun, name="get_kun"),
+    #URL FOR SPORT PAGE
+    path('sport/', views.sport, name="get_sport"),
+    #URL FOR SCRAPING SPORT NEWS
+    path('loadsport/', views.get_sport, name="load_sport"),
+    #URL FOR POLITICS PAGE
+    path('politics/', views.siyosat, name="siyosat"),
+    #URL FOR SCRAPING POLITICAL NEWS
+    path('loadpolitics/', views.get_siyosat, name="load_siyosat"),
+    #URL FOR ECONOMICS PAGE
+    path('jahon/', views.jahon, name="jahon"),
+    #URL FOR SCRAPING ECONOMIC NEWS
+    path('loadeconomy/', views.get_economy, name="load_economy"),
 ]
