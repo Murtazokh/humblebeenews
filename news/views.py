@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from django.shortcuts import render, redirect
 from news.models import News, Sport, Politics, Economy
+from django.core.paginator import Paginator
 
 HEADERS = {"User-Agent": "Googlebot/2.1 (+http://www.google.com/bot.html)"}
 
@@ -373,9 +374,14 @@ def get_economy(request):
 
 def index(req):
     """This function renders scraped information to html file"""
+    # n = News.objects.all()[::-1]
     n = News.objects.all()[::-1]
+    p = Paginator(News.objects.all(), 2)
+    page = req.GET.get('page')
+    new = p.get_page(page)
     context = {
-       "object_list":n
+       "object_list":n,
+       "new":new
     }
     return render(req, 'news/index.html', context )
 

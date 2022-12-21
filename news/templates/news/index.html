@@ -54,7 +54,7 @@
 
 	</head>
 	<style>
-    ul{
+    ul.nav-list{
     background: white;
     box-shadow: 0px 0px 10px #cfd8dc;
     margin: 0;
@@ -64,7 +64,7 @@
 	justify-content: flex-end;
 	align-items: center;
     }
-	li{
+	li.nav-item{
 		list-style: none;
 		margin-right: 2rem;
 	}
@@ -86,6 +86,20 @@
 	}
 	.nav-item a:hover{
 		color: orange;
+	}
+	ul.pagination{
+		background: white;
+		box-shadow: 0px 0px 10px #cfd8dc;
+		margin: 0;
+		padding: 1rem 0;
+		border-radius: 0.2rem;
+		justify-content: center;
+		align-items: center;
+		display:flex;
+	}
+	li.page-item{
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
 	}
 	</style>
 	<body>
@@ -147,7 +161,7 @@
 			<div class="row">
 
         <div id="fh5co-board" data-columns>
-			{% for object in object_list %}
+			{% for object in new %}
 			<!--KUN.UZ NEWS-->
         	<div class="item" >
         		<div class="animate-box">
@@ -181,10 +195,28 @@
         	</div>
         	
         	{% endfor %}
+			
         </div>
         </div>
+		<hr><br/><br/>
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+			{% if new.has_previous %}
+			   <li class="page-item"><a class="page-link" href="?page=1">&laquo;First</a></li>
+			   <li class="page-item"><a class="page-link" href="?page={{new.previous_page_number}}">Previous</a></li>
+			{% endif %}
+		    <li class="page-item disabled"><a href="#">Page {{ new.number }} of {{ new.paginator.num_pages }}</a></li>
+			{% if new.has_next %}
+			    <li class="page-item"><a class="page-link" href="?page={{ new.next_page_number }}">Next</a></li>
+				<li class="page-item"><a class="page-link" href="?page={{ new.paginator.num_pages }}">Last&raquo;</a></li>
+			{% endif %}
+		</ul>
+	</nav>
        </div>
+	   
 	</div>
+	<br/></br/>
+	<!-- {{ new }} -->
 
 	<footer id="fh5co-footer">
 		
