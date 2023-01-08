@@ -22,4 +22,4 @@ Implementation:
 
 This application uses Python web scrapping libraries to crawl some popular news websites like kun.uz, daryo.uz and scrape latest news. With the help of HTML, CSS and JavaScript, the scrapped data is then displayed in a single page for users to read. Users will be able to get all headlines in a single page.
 
-![name-of-you-image](image.png)
+![name-of-you-image]()
