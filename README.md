@@ -23,3 +23,4 @@ Implementation:
 This application uses Python web scrapping libraries to crawl some popular news websites like kun.uz, daryo.uz and scrape latest news. With the help of HTML, CSS and JavaScript, the scrapped data is then displayed in a single page for users to read. Users will be able to get all headlines in a single page.
 
 ![Website Screenshot](https://github.com/humblebeeintel/HumblebeeNews/blob/main/static/news/screenshot_1.png)
+![Website Screenshot](https://github.com/humblebeeintel/HumblebeeNews/blob/main/static/news/screenshot_2.png?raw=true)
