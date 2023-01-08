@@ -139,7 +139,7 @@
 							<a href="{% url 'get_sport' %}">Sport</a>
 						</li>
 						<li class="nav-item">
-							<a href="{% url 'load_economy' %}">
+							<a href="{% url 'get_kun' %}">
 							<button class="btn-primary">Yangilash</button></a>
 						</li>
 					</ul>
@@ -153,29 +153,12 @@
 		</div>
 	</header>
 	<!-- END .header -->
-	
-	
-		<div id="fh5co-main">
-		<div class="container">
+    {% block content %}
 
-			<div class="row">
 
-        <div id="fh5co-board" data-columns>
-			{% for object in object_list %}
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="{{object.image}}" class="image-popup fh5co-board-img"><img src="{{object.image}}" alt="img" height="188"></a>
-	        		<div class="fh5co-desc"><a href="{% url 'body_economy' object.pk %}">{{object.title}}</a></div>
-					<small class="fh5co-desc">Posted {{object.created|timesince}} ago</small>
-        		</div>
-        	</div>
-        	
-        	{% endfor %}
-        </div>
-        </div>
-       </div>
-	</div>
 
+
+    {% endblock content %}
     <footer id="fh5co-footer">
 		
 		<div class="container">

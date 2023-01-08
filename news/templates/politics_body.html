@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    #main-pic{
+        margin-left: auto;
+        margin-right: auto ;
+        border-radius: 2%;
+        display: block;
+    }
+    #title-mn{
+        text-align: center;
+        font-size: xx-large;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #time{
+        margin-left: 10pc;
+    }
+    #main-body{
+        padding: 2pc;
+        font-size: large;
+        text-align: justify;
+    }
+</style>
+
+<div class="container">
+    <figure>
+        <div class="news-top-head__content">
+            <img id="main-pic" src="{{body.body_image}}" alt="" class="news-top-head__img" height="600" >
+        </div>
+            <small id="time">Posted {{body.created|timesince}} ago</small>
+        <strong id="title-mn">
+            <p>{{body.title}}</p>
+        </strong>
+        <div id="main-body">
+            <p >{{body.body|linebreaks}}</p>
+        </div>    
+    </figure>
+</div>
+
+{% endblock content %}

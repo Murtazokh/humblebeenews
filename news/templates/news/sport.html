@@ -44,7 +44,7 @@
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="{% static 'news/css/style.css' %}">
 	<!-- image handling -->
-	<link rel="stylesheet" href="{% static 'news/css/image.css' %}" type="text/css">
+	<!-- <link rel="stylesheet" href="{% static 'news/css/image.css' %}"> -->
 	<!-- Modernizr JS -->
 	<script src="{% static 'news/js/modernizr-2.6.2.min.js' %}"></script>
 	<!-- FOR IE9 below -->
@@ -53,7 +53,57 @@
 	<![endif]-->
 
 	</head>
+	<style>
+    ul.nav-list{
+    background: white;
+    box-shadow: 0px 0px 10px #cfd8dc;
+    margin: 0;
+    padding: 1rem 0;
+	border-radius: 0.2rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+    }
+	li.nav-item{
+		list-style: none;
+		margin-right: 2rem;
+	}
+	.nav-item a{
+		text-decoration: none;
+		color: black;
+	}
+	.nav-item:first-child{
+		margin-right: auto;
+		margin-left: 2rem;
+	}
+	.btn-primary{
+		background-color: orange;
+		border: none;
+		outline: none;
+		border-radius: 0.2rem;
+		padding: 0.5rem 1rem;
+		transition:all 200ms ease-in;
+	}
+	.nav-item a:hover{
+		color: orange;
+	}
+	ul.pagination{
+		background: white;
+		box-shadow: 0px 0px 10px #cfd8dc;
+		margin: 0;
+		padding: 1rem 0;
+		border-radius: 0.2rem;
+		justify-content: center;
+		align-items: center;
+		display:flex;
+	}
+	li.page-item{
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+	</style>
 	<body>
+		
 		
 	<div id="fh5co-offcanvass">
 		<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">Menu <i class="icon-cross"></i> </a>
@@ -62,22 +112,42 @@
 			<li class="active"><a href="/">Home</a></li>
 		</ul>
 		<h3 class="fh5co-lead">Connect with us</h3>
-		<p class="fh5co-social-icons">
-			<a href="https://www.linkedin.com/in/kevin-joe-harris/"><i class="fab fa-linkedin"></i></a>
-			<a href="https://github.com/Kevinjoeharris"><i class="fab fa-github"></i></a>
-			<a href="https://www.facebook.com/kevinjoe.harris/"><i class="fab fa-facebook"></i></a>
-			<a href="https://www.instagram.com/kevin_joe_harris/"><i class="icon-instagram"></i></a>
+		 <p class="fh5co-social-icons"> 
+			<a href="https://github.com/humblebeeintel"><img src="{% static 'news/images/git.png' %}" width="30"></a>
+			<a href="#"><img src="{% static 'news/images/facebook.png' %}" width="25"></a>
+			<a href="#"><img src="{% static 'news/images/youtube.png' %}" width="25"></a>
+			
 			
 		</p>
 	</div>
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="row">
+				<navbar>
+					<link rel="stylesheet" href="{% static 'news/css/image.css' %}" type="text/css">
+					<ul class="nav-list">
+						<li class="nav-item">
+							<a href="../"><img id="profile-pic" src="{% static 'news/images/bee.jpeg' %}"></a>
+						</li>
+						<li class="nav-item">
+							<a href="{% url 'economy' %}">Iqtisodiyot</a>
+						</li>
+						<li class="nav-item">
+							<a href="{% url 'siyosat' %}">Siyosat</a>
+						</li>
+						<li class="nav-item">
+							<a href="{% url 'get_sport' %}">Sport</a>
+						</li>
+						<li class="nav-item">
+							<a href="{% url 'load_sport' %}">
+							<button class="btn-primary">Yangilash</button></a>
+						</li>
+					</ul>
+				</navbar>
 				
 				<div class="col-md-12">
-					<a href="../"><img id="profile-pic" src="{% static 'news/images/bee.jpeg' %}" width="80" height="80"></a>
 					<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
-					<a class="navbar-brand" href="{% url 'load_sport' %}">Sport</a>		
+					<a class="navbar-brand" href="{% url 'home' %}">HumbleBee News</a>
 				</div>
 			</div>
 		</div>
@@ -93,38 +163,13 @@
         <div id="fh5co-board" data-columns>
 			{% for object in object_list %}
 			<!--KUN.UZ NEWS-->
-        	<div class="item" >
-        		<div class="animate-box">
-	        		<a href="{{object.dar_img}}" class="image-popup fh5co-board-img"><img src="{{object.dar_img}}" alt="img" height="188"></a>
-        		</div>
-        		<div class="fh5co-desc"><a href="{{object.dar_l}}">{{object.dar_t}}</a></div>
-        	</div>
-            <div class="item">
-        		<div class="animate-box">
-	        		<a href="{{object.side_img1}}" class="image-popup fh5co-board-img"><img src="{{object.side_img1}}" alt="img" height="188"></a>
-	        		<div class="fh5co-desc"><a href="{{object.side_l1}}">{{object.side_t1}}</a></div>
-        		</div>
-        	</div> 
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="{{object.sport_img}}" class="image-popup fh5co-board-img"><img src="{{object.sport_img}}" alt="img" height="188"></a>
-	        		<div class="fh5co-desc"><a href="{{object.sport_l}}">{{object.sport_t}}</a></div>
-        		</div>
-        	</div>
-        	
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="{{object.nuz_img}}" class="image-popup fh5co-board-img"><img src="{{object.nuz_img}}" alt="img" height="188"></a>
-	        		<div class="fh5co-desc"><a href="{{object.nuz_l}}">{{object.nuz_t}}</a></div>
-        		</div>
-        	</div>
-        	 
-        	<div class="item">
-        		<div class="animate-box">
-	        		<a href="{{object.sputnik_img}}" class="image-popup fh5co-board-img"><img src="{{object.sputnik_img}}" alt="img" height="188"></a>
-	        		<div class="fh5co-desc"><a href="{{object.sputnik_l}}">{{object.sputnik_t}}</a></div>
-        		</div>
-        	</div>
+				<div class="item" >
+					<div class="animate-box">
+						<a href="{{object.image}}" class="image-popup fh5co-board-img"><img src="{{object.image}}" alt="img" height="188"></a>
+					</div>
+					<div class="fh5co-desc"><a href="{% url 'body_sport' object.pk  %}">{{object.title}}</a></div>
+					<small class="fh5co-desc">Posted {{object.created|timesince}} ago</small>
+				</div>
         	
         	{% endfor %}
         </div>
@@ -132,18 +177,18 @@
        </div>
 	</div>
 
-	<footer id="fh5co-footer">
+    <footer id="fh5co-footer">
 		
 		<div class="container">
 			<div class="row row-padded">
 				<div class="col-md-12 text-center">
 					<p class="fh5co-social-icons">
-						<a href="https://www.linkedin.com/in/kevin-joe-harris/"><i class="fab fa-linkedin"></i></a>
-						<a href="https://github.com/Kevinjoeharris"><i class="fab fa-github"></i></a>
-						<a href="https://www.facebook.com/kevinjoe.harris/"><i class="fab fa-facebook"></i></a>
-						<a href="https://www.instagram.com/kevin_joe_harris/"><i class="icon-instagram"></i></a>
+						<!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+						<!-- <a href="#"><i class="fab fa-github"></i></a> -->
+						<!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
+						<!-- <a href="#"><i class="icon-instagram"></i></a> -->
 					</p>
-					<p><small>&copy; News Aggregator<br>Developed & Designed by: <a href="https://www.linkedin.com/in/murtazokhon-avazkhonov-3a40a2253/" target="_blank">Murtazokhon</a></small></p>
+					<p><small>&copy; News Aggregator<br>Developed & Designed by: <a href="https://github.com/humblebeeintel" target="_blank">Humblebeeintel</a></small></p>
 				</div>
 			</div>
 		</div>
