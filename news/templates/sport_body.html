@@ -127,7 +127,9 @@
 					<link rel="stylesheet" href="{% static 'news/css/image.css' %}" type="text/css">
 					<ul class="nav-list">
 						<li class="nav-item">
-							<a href="../"><img id="profile-pic" src="{% static 'news/images/bee.jpeg' %}"></a>
+							<div id="col-lg-6">
+								<INPUT id="back-button" TYPE="button" VALUE="Ortga qaytish" onClick="history.go(-1);">
+							</div>
 						</li>
 						<li class="nav-item">
 							<a href="{% url 'economy' %}">Iqtisodiyot</a>
@@ -185,9 +187,11 @@
 		transition-duration: 0.2s;
         transition-timing-function: ease-in-out;
         transition-property: background-color, color;
-        font-size: 20px;
+        font-size: small;
         box-shadow: 0px 0px 10px #cfd8dc;
         margin: 0;
+		
+		
     }  
     #col-lg-6 :hover{
         color: sandybrown;
@@ -195,9 +199,6 @@
 </style>
 
 <div class="container">
-	<div id="col-lg-6">
-        <INPUT id="back-button" TYPE="button" VALUE="Ortga qaytish" onClick="history.go(-1);">
-    </div>
     <figure>
         <div class="news-top-head__content">
             <img id="main-pic" src="{{body.body_image}}" alt="" class="news-top-head__img" height="600" >
@@ -223,7 +224,7 @@
                     <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
                     <!-- <a href="#"><i class="icon-instagram"></i></a> -->
                 </p>
-                <p><small>&copy; News Aggregator<br>Developed & Designed by: <a href="https://www.linkedin.com/in/murtazokhon-avazkhonov-3a40a2253/" target="_blank">Murtazokhon</a></small></p>
+				<p><small>&copy; News Aggregator<br>Developed & Designed by: <a href="https://github.com/humblebeeintel" target="_blank">Humblebeeintel</a></small></p>
             </div>
         </div>
     </div>
