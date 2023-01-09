@@ -175,9 +175,29 @@
         font-size: large;
         text-align: justify;
     }
+	#back-button {
+        background-color: rgb(255, 255, 255);
+		border: 1px solid rgb(85, 85, 84);
+		outline: none;
+        color: #333;
+		border-radius: 5%;
+		padding: 0.5rem 1rem;
+		transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        transition-property: background-color, color;
+        font-size: 20px;
+        box-shadow: 0px 0px 10px #cfd8dc;
+        margin: 0;
+    }  
+    #col-lg-6 :hover{
+        color: sandybrown;
+    } 
 </style>
 
 <div class="container">
+	<div id="col-lg-6">
+        <INPUT id="back-button" TYPE="button" VALUE="Ortga qaytish" onClick="history.go(-1);">
+    </div>
     <figure>
         <div class="news-top-head__content">
             <img id="main-pic" src="{{body.body_image}}" alt="" class="news-top-head__img" height="600" >
