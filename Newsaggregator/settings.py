@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'Newsaggregator.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
-        # 'USER':'pqxjpdggexhtrc',        
-        # 'PASSWORD':'f57ee14c3e3c111391e3d7f1260af3f8df0399092ed613d1395e0b3f325a638b',
-        # 'HOST':'ec2-44-195-100-240.compute-1.amazonaws.com',
-        # 'PORT':'5432'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd79q271m90j6cd',
+        'USER':'pqxjpdggexhtrc',        
+        'PASSWORD':'f57ee14c3e3c111391e3d7f1260af3f8df0399092ed613d1395e0b3f325a638b',
+        'HOST':'ec2-44-195-100-240.compute-1.amazonaws.com',
+        'PORT':'5432'
     }
 }
 import dj_database_url
