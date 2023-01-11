@@ -13,55 +13,58 @@ def get_latest(request):
     Post.objects.all().delete()  
 
     #kun.uz
-    page = SESSION.get("https://kun.uz/news/category/uzbekiston")
-    strainer = SoupStrainer('div', attrs={'class': 'col-md-4 mb-25 l-item'})
-    soup = BeautifulSoup(page.content, 'html.parser', parse_only=strainer)
-    a = soup.find_all('div', class_='col-md-4 mb-25 l-item')[:4]
+    
+    # page = SESSION.get("https://kun.uz/news/category/uzbekiston", timeout=30)
+    # strainer = SoupStrainer('div', attrs={'class': 'col-md-4 mb-25 l-item'})
+    # soup = BeautifulSoup(page.content, 'html.parser', parse_only=strainer)
+    # a = soup.find_all('div', class_='col-md-4 mb-25 l-item')[:4]
+  
+    
 
     page1 = SESSION.get("https://www.uzdaily.uz/uz/section/1", headers=HEADERS)
     strainer1 = SoupStrainer('div', attrs={'class': 'dis_flex box_shadow margin_block'})
     soup1 = BeautifulSoup(page1.content, 'html.parser', parse_only=strainer1)
-    e = soup1.find_all('div', class_='dis_flex box_shadow margin_block')[:4]
+    e = soup1.find_all('div', class_='dis_flex box_shadow margin_block')[:5]
 
     page2 = SESSION.get("https://www.gazeta.uz/uz/", headers=HEADERS)
     strainer4 = SoupStrainer('div', attrs={'class': 'nblock'})
     soup2 = BeautifulSoup(page2.content, 'html.parser')
-    d = soup2.find_all('div', class_='nblock')[:4]
+    d = soup2.find_all('div', class_='nblock')[:5]
     
     page3 = SESSION.get("https://daryo.uz/")
     strainer4 = SoupStrainer('article', attrs={'class': 'article__small border'})
     soup3 = BeautifulSoup(page3.content, 'html.parser', parse_only=strainer4)
-    b = soup3.find_all('article', class_='article__small border')[:4]
+    b = soup3.find_all('article', class_='article__small border')[:5]
 
     page4 = SESSION.get("https://uza.uz/uz")
     strainer7 = SoupStrainer('div', attrs={'class': 'small-news'})
     soup4 = BeautifulSoup(page4.content, 'html.parser', parse_only=strainer7)
-    f = soup4.find_all('div', class_='small-news')[:4]
+    f = soup4.find_all('div', class_='small-news')[:5]
         
-    for x in a:
-        t = x.find('a', {"class":"news__title"})
-        title = t.text       
-        l = x.find('a', {"class":"news__img"})
-        link = 'https://kun.uz'+l.get('href')
-        i = x.find('img')
-        image = i['src']
-        p = SESSION.get(f"{link}")
-        strainer2 = SoupStrainer('div', attrs={'class': 'single-content'})
-        s = BeautifulSoup(p.content, 'html.parser', parse_only=strainer2)
-        strainer_2 = SoupStrainer('div', attrs={'class': 'main-img'})
-        s_ = BeautifulSoup(p.content, 'html.parser', parse_only=strainer_2)
-        body = s.find("div",class_="single-content").text
-        try:
-                body_image_kun = s_.find("img").get('src')
-        except:
-                body_image_kun = "no photo"        
+    # for x in a:
+    #     t = x.find('a', {"class":"news__title"})
+    #     title = t.text       
+    #     l = x.find('a', {"class":"news__img"})
+    #     link = 'https://kun.uz'+l.get('href')
+    #     i = x.find('img')
+    #     image = i['src']
+    #     p = SESSION.get(f"{link}")
+    #     strainer2 = SoupStrainer('div', attrs={'class': 'single-content'})
+    #     s = BeautifulSoup(p.content, 'html.parser', parse_only=strainer2)
+    #     strainer_2 = SoupStrainer('div', attrs={'class': 'main-img'})
+    #     s_ = BeautifulSoup(p.content, 'html.parser', parse_only=strainer_2)
+    #     body = s.find("div",class_="single-content").text
+    #     try:
+    #             body_image_kun = s_.find("img").get('src')
+    #     except:
+    #             body_image_kun = "no photo"        
                
-        p = Post()
-        p.title = title
-        p.image = image
-        p.body = body
-        p.body_image = body_image_kun
-        p.save() 
+    #     p = Post()
+    #     p.title = title
+    #     p.image = image
+    #     p.body = body
+    #     p.body_image = body_image_kun
+    #     p.save() 
     
     for r in e:
         t4 = r.find("h3", class_="title mt-1 text_wrap")
