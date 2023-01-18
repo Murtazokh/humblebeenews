@@ -170,10 +170,10 @@ def get_sport(request):
     a = soup6.find_all('div', class_='mini__article')[:4]
    
     #URL AND MAIN TAG OF ONSIDE.UZ:
-    page7 = SESSION.get("http://onside.uz/home", headers=HEADERS)
-    strainer7 = SoupStrainer('div', attrs={'class': 'col-sm-6'})
+    page7 = SESSION.get("https://uz-sport.com/", headers=HEADERS)
+    strainer7 = SoupStrainer('div', attrs={'class': 'post-outer col-xs-12'})
     soup7 = BeautifulSoup(page7.content, 'html.parser', parse_only=strainer7)
-    b = soup7.find_all('div', class_='col-sm-6')[:4]
+    b = soup7.find_all('article', class_='post-wrap post-list post-list-3 post-list-7 clearfix')[:4]
    
     #URL AND MAIN TAGS OF SPORTS.UZ:
     page8 = SESSION.get("https://sports.uz/", headers=HEADERS)
@@ -229,19 +229,19 @@ def get_sport(request):
         S.save()
 
     for w in b:
-        t2 = w.find('h2', class_='title')
+        t2 = w.find('h2', class_='post-title entry-title is-size-3')
         side_t = t2.text.strip()        
-        l2 = w.find('a')
-        side_l = 'http://onside.uz'+l2.get('href')
-        i2 = w.find('img')
-        side_img=("http://onside.uz"+i2['src']) 
+        l2 = w.find('a', class_='post-title-link')
+        side_l = l2.get('href')
+        i2 = w.find('div', class_="post-thumb is-image")
+        side_img=i2.find('img').get('src') 
         p8 = SESSION.get(side_l)
-        strainer8 = SoupStrainer('div', attrs={'class': 'col-sm-8 pl-15'})
+        strainer8 = SoupStrainer('div', attrs={'class': 'entry single-entry'})
         s7 = BeautifulSoup(p8.content, 'html.parser', parse_only=strainer8)        
-        body7 = s7.find("p").text 
-        strainer_8 = SoupStrainer('div', attrs={'class': 'col-sm-4 minh'})
+        body7 = s7.find("div", class_="entry single-entry").text 
+        strainer_8 = SoupStrainer('div', attrs={'class': 'post-thumb'})
         s_7 = BeautifulSoup(p8.content, 'html.parser', parse_only=strainer_8)
-        body_image_side = "http://onside.uz"+s_7.find('img').get('src')
+        body_image_side = s_7.find('img').get('src')
         S = Sport()
         S.title = side_t
         S.image = side_img
