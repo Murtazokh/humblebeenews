@@ -204,18 +204,23 @@ def get_sport(request):
         l1 = q.find('a', class_="mini__article-link")
         dar_l = 'https://daryo.uz'+l1.get('href')
         i1 = q.find('img')
+        # try:
+        #         dar_img=("http://daryo.uz"+i1['src'])
+        # except:
         try:
-                dar_img=("http://daryo.uz"+i1['src'])
+            dar_img=(("http://daryo.uz"+i1['data-src']))
         except:
-                dar_img=(("http://daryo.uz"+i1['data-src']))
+            pass    
         p6 = SESSION.get(dar_l)
         strainer6 = SoupStrainer('div', attrs={'class': 'default__section border'})
         s6 = BeautifulSoup(p6.content, 'html.parser', parse_only=strainer6)        
         body6 = s6.find("div", class_="default__section border").text 
         try:
-                body_image_daryo = 'https://daryo.uz'+s6.find('img').get('src')
+            body_image_daryo = 'https://daryo.uz'+s6.find('img').get('src')
         except:
-                body_image_daryo = 'https://daryo.uz'+s6.find('img').get('data-src')
+            # body_image_daryo = 'https://daryo.uz'+s6.find('img').get('data-src')
+            pass
+        print(body_image_daryo)
         S = Sport()
         S.title = dar_t
         S.image = dar_img
