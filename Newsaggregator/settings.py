@@ -90,6 +90,14 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
+# Set the broker URL from the environment variable
+BROKER_URL = os.environ.get('CLOUDAMQP_URL')
+
+# Set the result backend to use the Django database
+CELERY_RESULT_BACKEND = 'django-db'
+
+# Set the Celery timezone
+CELERY_TIMEZONE = 'Asia/Seoul'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -142,6 +150,10 @@ MEDIA_URL = 'news/images/'
 # STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage' 
 MEDIA_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/images")
+
+
+
+
 
 LOGGING = {
     'version': 1,
